@@ -13,26 +13,33 @@ reader = easyocr.Reader(['ja', 'en'],
 
 # Streamlitアプリの設定
 st.set_page_config(
-    page_title="日本語OCRアプリ",
+    page_title="OCR-DEMO",
     page_icon="📚",
     layout="wide"
 )
 
-# ページのタイトルと説明を表示
-st.title("日本語OCRアプリ")
-st.markdown(
+
+st.sidebar.title("📚OCR-DEMO")
+
+st.sidebar.markdown(
     """
-    このアプリでは、アップロードした画像中のテキストを自動的に検出し、テーブルとして表示します。
+    このアプリでは、アップロードした画像中のテキストを自動的に検出し、テーブルとして表示します。\n
     """
 )
 
-
+st.sidebar.markdown(
+    """
+    ---
+    """
+)
 # 言語の選択
 languages = st.sidebar.multiselect("OCRに使用する言語を選択してください", ['ja', 'en'], default=['ja'])
 
-
 # 画像ファイルのアップロード
-uploaded_file = st.file_uploader("画像をアップロードしてください。", type=['jpg', 'png'])
+uploaded_file = st.sidebar.file_uploader("画像をアップロードしてください。", type=['jpg', 'png'])
+
+# ページのタイトルと説明を表示
+st.title("OCR-DEMO")
 
 if uploaded_file is not None:
     # アップロードされた画像を読み込む
@@ -52,11 +59,11 @@ if uploaded_file is not None:
 
     # 検出結果の表示
     with col3:
-        st.subheader("検出結果")
+        st.subheader("検出結果 [text,座標,score]")
         # 結果をテーブル形式で表示
         result_df = pd.DataFrame(result, columns=["bbox", "text", "score"])
-        result_df['id'] = result_df.index
-        st.dataframe(result_df[["id", "text", "bbox", "score"]])
+        #result_df['id'] = result_df.index
+        st.dataframe(result_df[["text", "bbox", "score"]])
 
     for detection in result:
         # 文字列、座標、スコアの取得
@@ -76,6 +83,6 @@ if uploaded_file is not None:
     # 結果をCSVに保存してダウンロードリンクを表示
 
         st.markdown("---")
-        csv = result_df[["id", "text", "bbox", "score"]].to_csv(index=False)
+        csv = result_df[["text", "bbox", "score"]].to_csv(index=False)
         b64 = base64.b64encode(csv.encode()).decode()
-        st.markdown(f'<a href="data:file/csv;base64,{b64}" download="result.csv">結果をダウンロード</a>', unsafe_allow_html=True)
+        st.markdown(f'<a href="data:file/csv;base64,{b64}" download="result.csv">⬇️結果をダウンロード</a>', unsafe_allow_html=True)
