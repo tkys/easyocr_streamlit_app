@@ -2,7 +2,7 @@
 
 [OCR-DEMO.webm](https://github.com/tkys/easyocr_streamlit_app/assets/24400946/daab04f1-8dbc-4b98-b245-6e55a2549df9)
 
-### get laguage-model files
+### get pre-trained ocr-language-model files
 
 ```
 mkdir ./model
