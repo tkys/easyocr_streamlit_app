@@ -1,9 +1,13 @@
 # easyocr_streamlit_app
 
-[OCR-DEMO_20231013.webm](https://github.com/tkys/easyocr_streamlit_app/assets/24400946/905ee24a-d85f-4a81-80e5-553b41899a9f)
+
+
+[OCR-DEMO-Google-Chrome-2023-10-13-14-29-31.webm](https://github.com/tkys/easyocr_streamlit_app/assets/24400946/67328609-fde4-4305-ae5b-061683d4197c)
+
 
 - [EasyOCR](https://github.com/JaidedAI/EasyOCR) :OCR
 - [Streamlit-cropper](https://github.com/turner-anderson/streamlit-cropper) : to crop target image
+
 
 ## 0. get pre-trained ocr-language-model files
 
@@ -32,3 +36,11 @@ $ docker run -it -p 8501:8501  crop_easy_ocr:latest
 ```
 
 Go to [http://localhost:8501](http://localhost:8501)
+
+
+
+---
+
+todo next 
+- [x] docker image
+- [ ] with ChatGPT4
