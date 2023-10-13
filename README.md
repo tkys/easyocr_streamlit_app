@@ -43,4 +43,5 @@ Go to [http://localhost:8501](http://localhost:8501)
 
 todo next 
 - [x] docker image
-- [ ] with ChatGPT4
+- [ ] @GPU
+- [ ] @ChatGPT4
