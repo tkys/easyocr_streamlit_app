@@ -1,6 +1,9 @@
 # easyocr_streamlit_app
 
-[OCR-DEMO.webm](https://github.com/tkys/easyocr_streamlit_app/assets/24400946/daab04f1-8dbc-4b98-b245-6e55a2549df9)
+[OCR-DEMO_20231013.webm](https://github.com/tkys/easyocr_streamlit_app/assets/24400946/905ee24a-d85f-4a81-80e5-553b41899a9f)
+
+- EasyOCR :for OCR
+- Streamlit-cropper : for crop image
 
 ## 0. get pre-trained ocr-language-model files
 
