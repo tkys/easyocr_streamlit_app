@@ -11,15 +11,15 @@
 $ mkdir ./model
 
 #japanese model
-wget https://github.com/JaidedAI/EasyOCR/releases/download/v1.3/japanese_g2.zip
-unzip japanese_g2.zip -d ./model
+$ wget https://github.com/JaidedAI/EasyOCR/releases/download/v1.3/japanese_g2.zip
+$ unzip japanese_g2.zip -d ./model
 
 #english model
-wget https://github.com/JaidedAI/EasyOCR/releases/download/v1.3/english_g2.zip
-unzip english_g2.zip -d ./model
+$ wget https://github.com/JaidedAI/EasyOCR/releases/download/v1.3/english_g2.zip
+$ unzip english_g2.zip -d ./model
 
 ```
-## 1. build docker
+## 1. build docker image
 
 ```
 $ docker build  --tag crop_easy_ocr .
@@ -30,3 +30,5 @@ $ docker build  --tag crop_easy_ocr .
 ```
 $ docker run -it -p 8501:8501  crop_easy_ocr:latest
 ```
+
+Go to [http://localhost:8501](http://localhost:8501)
