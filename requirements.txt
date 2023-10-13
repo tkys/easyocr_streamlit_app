@@ -1,6 +1,5 @@
-easyocr
-numpy
-pandas
 streamlit
-opencv-python
-Pillow
+streamlit_cropper
+easyocr
+pandas
+numpy
