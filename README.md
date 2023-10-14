@@ -42,6 +42,7 @@ Go to [http://localhost:8501](http://localhost:8501)
 ---
 
 todo next 
+- [x] save logs with sqlite
 - [x] docker image
 - [ ] @GPU
 - [ ] @ChatGPT-4 Vision API
