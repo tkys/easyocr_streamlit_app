@@ -9,7 +9,7 @@
 - [Streamlit-cropper](https://github.com/turner-anderson/streamlit-cropper) : to crop target image
 
 
-## 0. get pre-trained ocr-language-model files
+## 0. store pretrained model files
 
 ```
 $ mkdir ./model
